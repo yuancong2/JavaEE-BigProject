@@ -62,7 +62,7 @@
                     </c:otherwise>
                 </c:choose>
             </td>
-            <td><a href="editStudent.jsp?id=${student.id}">修改</a></td>
+            <td><a href="EditStudentServlet?id=${student.id}">修改</a></td>
         </tr>
     </c:forEach>
     <c:if test="${empty students}">

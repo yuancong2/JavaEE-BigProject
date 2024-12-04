@@ -4,14 +4,56 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>欢迎页</title>
     <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .welcome-container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .welcome-container img {
+            max-width: 100px; /* 根据需要调整 logo 的大小 */
+            margin-bottom: 20px;
+        }
+        .welcome-container h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .welcome-container a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .welcome-container a:hover {
+            background-color: #004494;
+        }
+    </style>
 </head>
 <body>
-    <h1>欢迎进入轨道！</h1>
-    <a href="StudentServlet">学员列表</a>
+    <div class="welcome-container">
+        <img src="img/logo.jpg" alt="Logo"> 
+        <h1>欢迎使用广仁驾校信息管理系统！</h1>
+        <a href="login.html">登录</a>
+    </div>
 </body>
 </html>

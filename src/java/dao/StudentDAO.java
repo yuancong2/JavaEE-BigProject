@@ -65,7 +65,7 @@ public void addStudent(Student student) {
 }
 
 public void updateStudent(Student student) {
-    String sql = "UPDATE student SET name = ?, phone = ?, registration_date = ?, status = ? WHERE id = ?";
+    String sql = "UPDATE student SET name = ?, phone = ?, registration_date = ?, status = ?, coach_id = ?, session_one = ?, session_two = ?, session_three = ? WHERE id = ?";
     try (Connection conn = DBUtil.getConnection();
          PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
@@ -73,7 +73,11 @@ public void updateStudent(Student student) {
         pstmt.setString(2, student.getPhone());
         pstmt.setString(3, student.getRegistration_date());
         pstmt.setString(4, student.getStatus());
-        pstmt.setInt(5, student.getId());
+        pstmt.setInt(5, student.getCoach_id()); // 设置教练ID
+        pstmt.setInt(6, student.getSession_one()); // 设置第一节课
+        pstmt.setInt(7, student.getSession_two()); // 设置第二节课
+        pstmt.setInt(8, student.getSession_three()); // 设置第三节课
+        pstmt.setInt(9, student.getId()); // ID 作为最后一个参数
         pstmt.executeUpdate();
     } catch (SQLException e) {
         e.printStackTrace();
@@ -94,6 +98,10 @@ public Student getStudentById(int id) {
                 student.setPhone(rs.getString("phone"));
                 student.setRegistration_date(rs.getString("registration_date"));
                 student.setStatus(rs.getString("status"));
+                student.setCoach_id(rs.getInt("coach_id")); // 获取教练ID
+                student.setSession_one(rs.getInt("session_one")); // 获取第一节课
+                student.setSession_two(rs.getInt("session_two")); // 获取第二节课
+                student.setSession_three(rs.getInt("session_three")); // 获取第三节课
                 return student;
             }
         }
