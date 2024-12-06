@@ -5,23 +5,17 @@
         <group>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/addStudent.jsp</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/servlet/EditStudentServlet.java</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/servlet/VehicleServlet.java</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/model/Vehicle.java</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/vehicleList.jsp</file>
+            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/homepage.jsp</file>
+            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/home.html</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/studentList.jsp</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/index.html</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/dao/VehicleDAO.java</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/addVehicle.jsp</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/servlet/TestConnectionServlet.java</file>
+            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/WEB-INF/web.xml</file>
+            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/login.html</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/dao/DBUtil.java</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/model/RepairRecord.java</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/editStudent.jsp</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/servlet/RepairHistoryServlet.java</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/dao/StudentDAO.java</file>
             <file>file:/D:/JavaEEhomework/JavaEE-BigProject/src/java/servlet/StudentServlet.java</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/editVehicle.jsp</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/repairHistory.jsp</file>
-            <file>file:/D:/JavaEEhomework/JavaEE-BigProject/web/repairForm.jsp</file>
         </group>
     </open-files>
 </project-private>

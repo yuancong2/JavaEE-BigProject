@@ -35,32 +35,32 @@ public class StudentServlet extends HttpServlet {
         request.getRequestDispatcher("/studentList.jsp").forward(request, response); // 转发到 JSP
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // 设置请求和响应的编码
-        request.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html;charset=UTF-8");
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    // 设置请求和响应的编码
+    request.setCharacterEncoding("UTF-8");
+    response.setContentType("text/html;charset=UTF-8");
 
-        // 添加新学员
-        String name = request.getParameter("name");
-        String phone = request.getParameter("phone");
-        String registrationDate = request.getParameter("registrationDate");
-        String status = "报名中";
-        String coachIdStr = request.getParameter("coachId"); // 假设从表单中获取教练ID
-        int sessionOneStr = 0; // 假设从表单中获取第一节课
-        int sessionTwoStr = 0; // 假设从表单中获取第二节课
-        int sessionThreeStr = 0; // 假设从表单中获取第三节课
+    // 添加新学员
+    String name = request.getParameter("name");
+    String phone = request.getParameter("phone");
+    String registrationDate = request.getParameter("registrationDate");
+    String status = "报名中";
+    String coachIdStr = request.getParameter("coachId"); // 假设从表单中获取教练ID
+    int sessionOneStr = 0; // 假设从表单中获取第一节课
+    int sessionTwoStr = 0; // 假设从表单中获取第二节课
+    int sessionThreeStr = 0; // 假设从表单中获取第三节课
 
-        Student student = new Student();
-        student.setName(name);
-        student.setPhone(phone);
-        student.setRegistration_date(registrationDate);
-        student.setStatus(status);
-        student.setCoach_id(Integer.parseInt(coachIdStr)); // 设置教练ID
-        student.setSession_one(sessionOneStr); // 设置第一节课
-        student.setSession_two(sessionTwoStr); // 设置第二节课
-        student.setSession_three(sessionThreeStr); // 设置第三节课
+    Student student = new Student();
+    student.setName(name);
+    student.setPhone(phone);
+    student.setRegistration_date(registrationDate);
+    student.setStatus(status);
+    student.setCoach_id(Integer.parseInt(coachIdStr)); // 设置教练ID
+    student.setSession_one(sessionOneStr); // 设置第一节课
+    student.setSession_two(sessionTwoStr); // 设置第二节课
+    student.setSession_three(sessionThreeStr); // 设置第三节课
 
-        studentDAO.addStudent(student); // 将学员信息添加到数据库
-        response.sendRedirect("StudentServlet"); // 重定向到学员列表页面
-    }
+    studentDAO.addStudent(student); // 将学员信息添加到数据库
+    response.sendRedirect("StudentServlet"); // 重定向到学员列表页面
+}
 }
