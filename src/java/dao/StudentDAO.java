@@ -110,6 +110,18 @@ public Student getStudentById(int id) {
     }
     return null;
 }
-
+    public static boolean deleteStudent(int id){
+    String sql = "DELETE FROM student WHERE id = ?";
+    
+    try (Connection conn = DBUtil.getConnection();
+         PreparedStatement pstmt = conn.prepareStatement(sql)) {
+        pstmt.setInt(1, id);
+        int rowsAffected = pstmt.executeUpdate(); // 获取受影响的行数
+        return rowsAffected > 0; // 如果删除了至少一行，返回 true
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false; // 如果发生异常，返回 false
+    }
+     }
 
 }
