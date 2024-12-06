@@ -13,6 +13,7 @@
 </head>
 <body>
 <h2>车辆列表</h2>
+<a href="addVehicle.jsp">添加新车辆</a>
 <table border="1">
     <tr>
         <th>编号</th>
@@ -30,30 +31,13 @@
             <td>${vehicle.status}</td>
             <td>${vehicle.remark}</td>
             <td>
-                <c:choose>
-                    <c:when test="${vehicle.status == '维修中'}">
-                        <a href="VehicleServlet?action=restore&id=${vehicle.id}">恢复可用</a>
-                    </c:when>
-                    <c:otherwise>
-                        <form action="RepairServlet" method="post">
-                            <input type="hidden" name="id" value="${vehicle.id}">
-                            <input type="text" name="cost" placeholder="维修费用" required>
-                            <input type="text" name="problem" placeholder="问题描述" required>
-                            <button type="submit">维修</button>
-                        </form>
-                    </c:otherwise>
-                </c:choose>
+                <a href="VehicleServlet?action=edit&id=${vehicle.id}">修改/删除</a>
+                <c:if test="${vehicle.status == '维修中'}">
+                    <a href="repairForm.jsp?id=${vehicle.id}">维修</a>
+                </c:if>
             </td>
         </tr>
     </c:forEach>
-    <c:if test="${empty vehicles}">
-        <tr>
-            <td colspan="6">没有车辆信息</td>
-        </tr>
-    </c:if>
 </table>
-<a href="addVehicle.jsp">添加新车辆</a>
 </body>
 </html>
-
-

@@ -9,13 +9,14 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>维修记录</title>
+    <title>填写维修记录</title>
 </head>
 <body>
 <h2>填写维修记录</h2>
+<!-- repairForm.jsp -->
 <form action="VehicleServlet" method="post">
-    <input type="hidden" name="action" value="finishRepair">
-    <input type="hidden" name="id" value="${param.id}">
+    <input type="hidden" name="action" value="repair">
+    <input type="hidden" name="vehicleId" value="${param.id}"> <!-- 确保这里正确传递了车辆ID -->
     <label for="problem">问题描述：</label><br>
     <textarea id="problem" name="problem" rows="4" cols="50" required></textarea><br><br>
     <label for="cost">维修费用：</label><br>

@@ -12,6 +12,7 @@
 <body>
 <h2>添加车辆</h2>
 <form action="VehicleServlet" method="post">
+    <input type="hidden" name="action" value="add"/> <!-- 指定 action 为 add -->
     车牌号: <input type="text" name="licensePlate" required><br>
     型号: <input type="text" name="model" required><br>
     备注: <input type="text" name="remark"><br>
